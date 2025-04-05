@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Puzzle Game</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="tilt-phone-message">
+        <div class="tilt-icon">📱↩️</div>
+        <h2>Please Tilt Your Phone</h2>
+        <p>This puzzle game works best in landscape mode for better gameplay experience.</p>
+        <p>Rotate your device horizontally or click the button below to start anyway.</p>
+        <button class="start-button" id="start-game-btn">Start Game</button>
+    </div>
+    
+    <div class="game-container">
+        <header>
+            <h1><i class="fas fa-puzzle-piece"></i> Puzzle Game</h1>
+            <div class="controls">
+                <button id="reset" class="btn">
+                    <i class="fas fa-redo"></i> Reset Game
+                </button>
+                <button id="change-image" class="btn">
+                    <i class="fas fa-sync"></i> Change Image
+                </button>
+            </div>
+            <div class="moves-counter">
+                <i class="fas fa-shoe-prints"></i>
+                <span id="moves">Moves: 0</span>
+            </div>
+        </header>
+
+        <div class="game-area">
+            <div class="reference-container">
+                <h2><i class="fas fa-image"></i> Reference Image</h2>
+                <img id="reference" src="" alt="Reference Image">
+                <p class="instruction">⬇️ Drag pieces from the right side and drop them into the left board to match this image</p>
+            </div>
+
+            <div class="puzzle-area">
+                <div id="puzzle-board"></div>
+                <div id="pieces-container"></div>
+            </div>
+        </div>
+
+        
+    </div>
+
+    <div id="success-modal" class="modal">
+        <div class="modal-content">
+            <i class="fas fa-trophy trophy-icon"></i>
+            <h2>Congratulations!</h2>
+            <p id="completion-message"></p>
+            <button id="play-again" class="btn">
+                <i class="fas fa-play"></i> Play Again
+            </button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html> 
